@@ -1,1 +1,4 @@
-web: waitress-serve --call recipe_app.run:create_app
+web: waitress-serve  recipe_app.run:application
+
+web: gunicorn recipe_app.wsgi:application
+
