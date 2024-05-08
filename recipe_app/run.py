@@ -21,6 +21,8 @@ app.config['SECRET_KEY'] = secret_key
 # Initialize CSRF protection
 csrf = CSRFProtect(app)
 
+application = app
+
 
 # if __name__ == '__main__':
 #     app.run(port=7000)
