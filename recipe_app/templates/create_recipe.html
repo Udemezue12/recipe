@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %} New Recipe {% endblock %}
+
+{% block content %}
+<div class="container jumbotron">
+  <form class="form-group" method="POST" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+
+    <div class="form-group">
+      {{ form.picture.label(class="form-control-label") }}
+      {{ form.picture(class="form-control-file") }}
+    </div>
+
+    <div class="form-group">
+      {{ form.title.label(class="form-control-label") }}
+      {{ form.title(class="form-control form-control-lg") }}
+    </div>
+    <div class="form-group">
+      {{ form.carbs.label(class="form-control-label") }}
+      {{ form.carbs(class="form-control form-control-lg") }}
+    </div>
+    <div class="form-group">
+      {{ form.calories.label(class="form-control-label") }}
+      {{ form.calories(class="form-control form-control-lg") }}
+    </div>
+    <div class="form-group">
+      {{ form.protein.label(class="form-control-label") }}
+      {{ form.protein(class="form-control form-control-lg") }}
+    </div>
+    <div class="form-group">
+      {{ form.fat.label(class="form-control-label") }}
+      {{ form.fat(class="form-control form-control-lg") }}
+    </div>
+    <div class="form-group">
+      {{ form.difficulty.label(class="form-control-label") }}
+      {{ form.difficulty(class="form-control form-control-lg") }}
+    </div>
+
+    <div class="form-group">
+      {{ form.instructions.label(class="form-control-label") }}
+      {{ form.instructions(class="form-control form-control-lg") }}
+    </div>
+
+    <div class="form-group">
+      {{ form.ingredients.label(class="form-control-label") }}
+      {{ form.ingredients(class="form-control form-control-lg") }}
+    </div>
+
+    <div class="form-group">
+      {{ form.cooking_time.label(class="form-control-label") }}
+      {{ form.cooking_time(class="form-control form-control-lg") }}
+    </div>
+
+    <div class="form-group">
+      <label for="rating">Rating:</label>
+      <div class="input-group">
+        <select class="custom-select" id="rating" name="rating">
+          <option selected disabled>Choose...</option>
+          <option value="1">1 star</option>
+          <option value="2">2 stars</option>
+          <option value="3">3 stars</option>
+          <option value="4">4 stars</option>
+          <option value="5">5 stars</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      {{ form.category.label(class="form-control-label") }}
+      {{ form.category(class="form-control form-control-lg") }}
+    </div>
+
+    <div class="form-group">
+      {{ form.submit(class="btn btn-outline-info") }}
+    </div>
+  </form>
+</div>
+{% endblock %}

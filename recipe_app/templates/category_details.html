@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div class="container jumbotron">
+
+<h1>{{ categories.name }}</h1>
+{% if recipes %}
+    <ul>
+        {% for recipe in recipes %}
+            <li><a href="{{ url_for('recipe.edit_recipe', recipe_id=recipe.id) }}">{{ recipe.title }}</a></li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No recipes found in this category.</p>
+{% endif %}
+</div>
+
+{% endblock  %}
+
+
