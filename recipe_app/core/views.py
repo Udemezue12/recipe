@@ -1,14 +1,18 @@
+import os
+from dotenv import load_dotenv
+import stripe
+
 from flask import render_template, Blueprint, request, url_for, redirect
 from recipe_app.models import Recipe, Category
 from recipe_app.run import app
-import stripe
 
+
+load_dotenv()
 
 core = Blueprint('core', __name__)
 
-public_key = 'pk_test_6pRNASCoBOKtIshFeQd4XMUh'
-
-stripe.api_key = "sk_test_BQokikJOvBiI2HlWgH4olfQ2"
+stripe.api_key = os.getenv('STRIPE_SECRET_KEY')
+public_key = os.getenv('STRIPE_PUBLIC_KEY')
 
 
 # @core.route('/')
