@@ -12,5 +12,5 @@ app.register_blueprint(users)
 app.register_blueprint(recipe)
 
 
-
 login_manager.init_app(app)
+

@@ -6,6 +6,7 @@ from whitenoise import WhiteNoise
 
 
 
+
 load_dotenv()
 
 app = Flask(__name__)
@@ -22,6 +23,11 @@ app.config['SECRET_KEY'] = secret_key
 csrf = CSRFProtect(app)
 
 application = app
+
+
+
+if __name__ == '__main__':
+    app.run(port=2000)
 
 
 # if __name__ == '__main__':

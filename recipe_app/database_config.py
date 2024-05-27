@@ -15,3 +15,7 @@ app.config['REMEMBER_COOKIE_DURATION'] = timedelta(seconds=20)
 if __name__ == '__main__':
     app.run()
 
+
+
+
+

@@ -9,3 +9,6 @@ admin.add_view(ModelView(User, db.session))
 admin.add_view(ModelView(Recipe, db.session))
 admin.add_view(ModelView(Category, db.session))
 # admin.add_view(ModelView(Tag, db.session))
+
+
+
